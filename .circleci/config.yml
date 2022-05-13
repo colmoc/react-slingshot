@@ -7,8 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: echo "build step"
-          command: npm run lint
+          npm run lint
+          # name: "build step"
+          # command: npm run lint
   test:
     docker:
       - image: cimg/base:stable
