@@ -13,17 +13,15 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "test step"
-          command: npm run test
+      - run: npm i
+      - run: npm run test
   analyse:
     docker:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "analyse step"
-          command: npm audit
+      - run: npm i
+      - run: npm audit
 
 workflows:
   myTestWorkflow:
