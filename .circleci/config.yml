@@ -6,8 +6,8 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - run: npm -i
       - run:
-          npm -i
           npm run lint
           # name: "build step"
           # command: npm run lint
