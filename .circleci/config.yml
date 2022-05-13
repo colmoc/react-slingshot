@@ -7,6 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
+          npm -i
           npm run lint
           # name: "build step"
           # command: npm run lint
